@@ -2,11 +2,9 @@ package whereToLunch.web.user;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import whereToLunch.model.User;
-
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;

@@ -34,7 +34,7 @@ public class AbstractUserController {
 
     @Autowired
     public void setEnvironment(Environment environment) {
-        systemUserForbiddenModification = Arrays.asList(environment.getActiveProfiles()).size() != 0;
+        systemUserForbiddenModification = Arrays.asList(environment.getActiveProfiles()).size() == 0;
     }
 
     public void checkModificationAllowed(Integer id) {

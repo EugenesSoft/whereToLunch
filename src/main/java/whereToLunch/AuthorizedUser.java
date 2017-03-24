@@ -1,15 +1,10 @@
 package whereToLunch;
 
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import whereToLunch.model.User;
 import whereToLunch.to.UserTo;
 import whereToLunch.util.UserUtil;
-
-import java.util.Collection;
-
 import static java.util.Objects.requireNonNull;
 
 /**
@@ -28,8 +23,7 @@ public class AuthorizedUser extends org.springframework.security.core.userdetail
     public static AuthorizedUser safeGet() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth == null) {
-            throw new UsernameNotFoundException("not found username");
-            //return null;
+            return null;
         }
         Object principal = auth.getPrincipal();
         return (principal instanceof AuthorizedUser) ? (AuthorizedUser) principal : null;

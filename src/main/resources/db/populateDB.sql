@@ -6,8 +6,8 @@ ALTER SEQUENCE global_seq RESTART WITH 100000;
 
 
 INSERT INTO users (name, email, password) VALUES
-('User', 'user@yandex.ru', 'password'),
-('Admin', 'admin@gmail.com', 'password');
+('User', 'user@yandex.ru', '$2a$10$dySNnvI9ltGzlZuJSlYL7OFl79nG7YTRN6XIinjPXB7l2WtA.ftbi'),
+('Admin', 'admin@gmail.com', '$2a$10$dySNnvI9ltGzlZuJSlYL7OFl79nG7YTRN6XIinjPXB7l2WtA.ftbi');
 
 INSERT INTO user_roles (role, user_id) VALUES
   ('ROLE_USER', 100000),

@@ -39,7 +39,7 @@
         <!--</property>-->
     </bean>
 
-    <context:component-scan base-package="whereToLunch.web"/>
+    <context:component-scan base-package="whereToLunch.**.web"/>
 
     <mvc:resources mapping="/resources/**" location="/resources/"/>
 
