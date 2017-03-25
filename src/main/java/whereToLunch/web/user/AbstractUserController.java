@@ -82,6 +82,11 @@ public class AbstractUserController {
         service.update(userTo);
     }
 
+    public void enable(int id, boolean enabled) {
+        checkModificationAllowed(id);
+        log.info((enabled ? "enable " : "disable ") + id);
+        service.enable(id, enabled);
+    }
 
     public void voteForCafe(int id, int cafeId){
         log.info("vote with user {} for cafe {}", id, cafeId);

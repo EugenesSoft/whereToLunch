@@ -25,7 +25,7 @@ public class DishServiceTest extends AbstractServiceTest {
     @Test
     public void delete() throws Exception {
         service.delete(DISH_3.getId());
-        MATCHER.assertCollectionEquals(Arrays.asList(DISH_1, DISH_2, DISH_4), service.getAll(LIDO_ID));
+        MATCHER.assertCollectionEquals(Arrays.asList(DISH_1, DISH_2, DISH_4), service.getAllForCafe(LIDO_ID));
     }
 
     @Test

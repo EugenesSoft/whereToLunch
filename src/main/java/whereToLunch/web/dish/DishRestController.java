@@ -31,8 +31,8 @@ public class DishRestController extends AbstractDishController {
 
     @Override
     @GetMapping
-    public List<Dish> getAll(int cafeId) {
-        return super.getAll(cafeId);
+    public List<Dish> getAll() {
+        return super.getAll();
     }
 
     @Override

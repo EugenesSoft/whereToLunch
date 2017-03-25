@@ -16,7 +16,6 @@
         <csrf disabled="true"/>
     </http>
 
-
     <http>
         <intercept-url pattern="/login" access="isAnonymous()"/>
         <intercept-url pattern="/register" access="isAnonymous()"/>
@@ -36,12 +35,6 @@
     <authentication-manager>
         <authentication-provider user-service-ref="userService">
             <password-encoder ref="passwordEncoder"/>
-
-                        <!--<user-service>-->
-                            <!--<user name="user@yandex.ru" password="$2a$10$dySNnvI9ltGzlZuJSlYL7OFl79nG7YTRN6XIinjPXB7l2WtA.ftbi" authorities="ROLE_USER"/>-->
-                            <!--<user name="admin@gmail.com" password="$2a$10$dySNnvI9ltGzlZuJSlYL7OFl79nG7YTRN6XIinjPXB7l2WtA.ftbi" authorities="ROLE_ADMIN"/>-->
-                        <!--</user-service>-->
-
         </authentication-provider>
     </authentication-manager>
 

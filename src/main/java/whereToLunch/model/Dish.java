@@ -25,7 +25,7 @@ public class Dish extends BaseEntity {
     @SafeHtml
     private double price;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "cafe_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Cafe cafe;

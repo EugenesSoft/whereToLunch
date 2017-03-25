@@ -39,8 +39,13 @@ public class DishRepositoryImpl implements DishRepository {
     }
 
     @Override
-    public List<Dish> getAll(int cafeId) {
+    public List<Dish> getAllForCafe(int cafeId) {
         return crudDishRepository.getAll(cafeId);
+    }
+
+    @Override
+    public List<Dish> getAll() {
+        return crudDishRepository.findAll();
     }
 
 }

@@ -51,20 +51,20 @@ public class User extends NamedEntity {
     public User() {
     }
 
-    public User(Integer id, String name, String email, String password, Set<Role> roles) {
+    public User(Integer id, String name, String email, String password, boolean enabled, Set<Role> roles) {
         super(id, name);
         this.email = email;
         this.password = password;
         this.roles = roles;
+        this.enabled = enabled;
     }
 
     public User(Integer id, String name, String email, String password, Role role, Role... roles) {
-        this(id,name,email,password, EnumSet.of(role, roles));
+        this(id,name,email,password, true, EnumSet.of(role, roles));
     }
 
     public User(User u) {
-        this(u.getId(), u.getName(), u.getEmail(), u.getPassword(), u.getRoles());
-        this.enabled = u.enabled;
+        this(u.getId(), u.getName(), u.getEmail(), u.getPassword(), u.enabled, u.getRoles());
     }
 
     public String getEmail() {

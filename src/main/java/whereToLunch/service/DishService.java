@@ -14,7 +14,9 @@ public interface DishService {
 
     void delete(int id) throws NotFoundException;
 
-    List<Dish> getAll(int cafeId);
+    List<Dish> getAllForCafe(int cafeId);
+
+    List<Dish> getAll();
 
     Dish update(Dish dish, int cafeId) throws NotFoundException;
 

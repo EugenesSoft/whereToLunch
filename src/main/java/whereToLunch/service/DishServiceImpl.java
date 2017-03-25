@@ -31,8 +31,14 @@ public class DishServiceImpl implements DishService {
     }
 
     @Override
-    public List<Dish> getAll(int cafeId) {
-        return repository.getAll(cafeId);
+    public List<Dish> getAllForCafe(int cafeId) {
+        return repository.getAllForCafe(cafeId);
+    }
+
+
+    @Override
+    public List<Dish> getAll() {
+        return repository.getAll();
     }
 
     @Override

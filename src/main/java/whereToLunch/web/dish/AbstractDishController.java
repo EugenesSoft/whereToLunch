@@ -30,9 +30,15 @@ public abstract class AbstractDishController {
         service.delete(id);
     }
 
-    public List<Dish> getAll(int cafeId){
-        LOG.info("get all dishes for cafe {}", cafeId);
-        return service.getAll(cafeId);
+//    public List<Dish> getAllForCafe(int cafeId){
+//        LOG.info("get all dishes for cafe {}", cafeId);
+//        return service.getAll(cafeId);
+//    }
+
+
+    public List<Dish> getAll(){
+        LOG.info("get all dishes");
+        return service.getAll();
     }
 
     public Dish update(Dish dish, int cafeId, int id){
